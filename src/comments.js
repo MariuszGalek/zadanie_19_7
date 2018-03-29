@@ -14,7 +14,7 @@ function comments(state = [], action) {
             return state.filter(comment => comment.id !== action.id);
         case EDIT_COMMENT:
             return state.map(comment =>
-              comment.id === action.id
+                comment.id === action.id
                 ? {...comment, text: action.text}
                 : comment
             );
